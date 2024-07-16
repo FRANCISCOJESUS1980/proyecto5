@@ -29,7 +29,7 @@ body {
 }
 .tabla {
   width: 70vmin;
-  height: 60vmin;
+  height: 70vmin;
   display: flex;
   flex-wrap: wrap;
   gap: 2vmin;
@@ -54,6 +54,7 @@ body {
   grid-template-columns: 1fr, 1fr;
   grid-template-rows: 1ft, 1ft;
   position: relative;
+  margin-top: 20px;
 
   h1 {
     margin: 0;
@@ -75,7 +76,7 @@ body {
   bottom: 0;
   left: 0;
   width: 85px;
-  height: 40px;
+  height: 43px;
   background-color: #40e0d0;
   z-index: -1;
 }
