@@ -47,7 +47,7 @@ function Ganador() {
       document.querySelector('#Resultado').innerHTML = 'Gana ' + turno
       document.querySelector('#jugarDeNuevo').style.display = 'inline'
 
-      for (j = 0; j < 3; j++) {
+      for (let j = 0; j < 3; j++) {
         cuadros[Condiciones[i][j]].style.backgroundColor = '#40E0D0'
       }
     }

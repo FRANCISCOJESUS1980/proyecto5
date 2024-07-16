@@ -54,6 +54,7 @@ body {
   grid-template-columns: 1fr, 1fr;
   grid-template-rows: 1ft, 1ft;
   position: relative;
+
   h1 {
     margin: 0;
     grid-column-start: 1;
@@ -89,6 +90,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   display: none;
+  margin-bottom: 30px;
 }
 #jugarDeNuevo:hover {
   padding: 10px 35px;
