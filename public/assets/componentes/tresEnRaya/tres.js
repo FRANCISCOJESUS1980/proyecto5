@@ -1,6 +1,23 @@
 let cuadros = document.querySelectorAll('.cuadro')
 let turno = 'X'
 let juegoTerminado = false
+let modoDeJuego = null
+
+document.getElementById('unJugador').addEventListener('click', () => {
+  modoDeJuego = 'unJugador'
+  iniciarJuego()
+})
+
+document.getElementById('dosJugadores').addEventListener('click', () => {
+  modoDeJuego = 'dosJugadores'
+  iniciarJuego()
+})
+
+function iniciarJuego() {
+  document.querySelector('.seleccionDeModo').style.display = 'none'
+  document.querySelector('.tresEnRaya').style.display = 'block'
+  reiniciarJuego()
+}
 
 cuadros.forEach((e) => {
   e.innerHTML = ''
@@ -10,6 +27,9 @@ cuadros.forEach((e) => {
       Ganador()
       Empate()
       cambiarTurno()
+      if (modoDeJuego === 'unJugador' && turno === '0' && !juegoTerminado) {
+        jugarMaquina()
+      }
     }
   })
 })
@@ -29,7 +49,6 @@ function Ganador() {
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
-
     [0, 3, 6],
     [1, 4, 7],
     [2, 5, 8],
@@ -69,6 +88,10 @@ function Empate() {
 }
 
 document.querySelector('#jugarDeNuevo').addEventListener('click', () => {
+  reiniciarJuego()
+})
+
+function reiniciarJuego() {
   juegoTerminado = false
   turno = 'X'
   document.querySelector('.foco').style.left = '0px'
@@ -80,4 +103,20 @@ document.querySelector('#jugarDeNuevo').addEventListener('click', () => {
     e.style.removeProperty('background-color')
     e.style.color = '#000'
   })
-})
+}
+
+function jugarMaquina() {
+  let movimientos = []
+  cuadros.forEach((e, index) => {
+    if (e.innerHTML === '') movimientos.push(index)
+  })
+
+  if (movimientos.length > 0) {
+    let movimientoMaquina =
+      movimientos[Math.floor(Math.random() * movimientos.length)]
+    cuadros[movimientoMaquina].innerHTML = '0'
+    Ganador()
+    Empate()
+    cambiarTurno()
+  }
+}
