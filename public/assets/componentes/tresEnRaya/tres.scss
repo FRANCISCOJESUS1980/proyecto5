@@ -8,7 +8,7 @@
   position: relative;
   margin-top: 20px;
 
-  h1 {
+  h2 {
     margin: 0;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -67,6 +67,23 @@
   margin: 10px;
 }
 .seleccionDeModo button:hover {
+  padding: 10px 35px;
+  background-color: #3a1c71;
+  color: white;
+}
+.volverAlMenu {
+  background-color: #3a1c71;
+  padding: 10px 25px;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline;
+  margin: 20px 0px;
+  color: white;
+}
+
+.volverAlMenu:hover {
   padding: 10px 35px;
   background-color: #3a1c71;
   color: white;
