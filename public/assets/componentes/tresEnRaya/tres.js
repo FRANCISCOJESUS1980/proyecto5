@@ -3,6 +3,24 @@ let turno = 'X'
 let juegoTerminado = false
 let modoDeJuego = null
 
+let victoriasX = localStorage.getItem('victoriasX')
+  ? parseInt(localStorage.getItem('victoriasX'))
+  : 0
+let victorias0 = localStorage.getItem('victorias0')
+  ? parseInt(localStorage.getItem('victorias0'))
+  : 0
+
+function actualizarContadores() {
+  document.querySelector(
+    '#contadorX'
+  ).innerHTML = `Victorias de X: ${victoriasX}`
+  document.querySelector(
+    '#contador0'
+  ).innerHTML = `Victorias de 0: ${victorias0}`
+}
+
+actualizarContadores()
+
 document.getElementById('unJugador').addEventListener('click', () => {
   modoDeJuego = 'unJugador'
   iniciarJuego()
@@ -69,6 +87,14 @@ function Ganador() {
       for (let j = 0; j < 3; j++) {
         cuadros[Condiciones[i][j]].style.backgroundColor = '#40E0D0'
       }
+      if (turno === 'X') {
+        victoriasX++
+        localStorage.setItem('victoriasX', victoriasX)
+      } else {
+        victorias0++
+        localStorage.setItem('victorias0', victorias0)
+      }
+      actualizarContadores()
     }
   }
 }
