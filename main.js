@@ -5,7 +5,7 @@ import './public/assets/componentes/tresEnRaya/btnvolverMenuPrin.js'
 import {
   iniciarJuego,
   reiniciarJuego
-} from './public/assets/componentes/volverMenu'
+} from './public/assets/componentes/tresEnRaya/volverMenu.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   const musicUrl =

@@ -1,3 +1,8 @@
+let cuadros = document.querySelectorAll('.cuadro')
+let turno = 'X'
+let juegoTerminado = false
+let modoDeJuego = null
+
 document.getElementById('volverAlMenu').addEventListener('click', () => {
   document.querySelector('.tresEnRaya').style.display = 'none'
   document.querySelector('.seleccionDeModo').style.display = 'flex'

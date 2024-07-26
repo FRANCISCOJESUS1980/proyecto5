@@ -1,3 +1,5 @@
+import { jugarMaquina } from './jugarmaquina'
+
 let cuadros = document.querySelectorAll('.cuadro')
 let turno = 'X'
 let juegoTerminado = false
@@ -52,7 +54,7 @@ cuadros.forEach((e) => {
   })
 })
 
-function cambiarTurno() {
+export function cambiarTurno() {
   if (turno === 'X') {
     turno = '0'
     document.querySelector('.foco').style.left = '85px'
@@ -62,7 +64,7 @@ function cambiarTurno() {
   }
 }
 
-function Ganador() {
+export function Ganador() {
   let Condiciones = [
     [0, 1, 2],
     [3, 4, 5],
@@ -99,7 +101,7 @@ function Ganador() {
   }
 }
 
-function Empate() {
+export function Empate() {
   if (!juegoTerminado) {
     let enEmpate = true
     cuadros.forEach((e) => {
@@ -117,7 +119,7 @@ document.querySelector('#jugarDeNuevo').addEventListener('click', () => {
   reiniciarJuego()
 })
 
-function reiniciarJuego() {
+export function reiniciarJuego() {
   juegoTerminado = false
   turno = 'X'
   document.querySelector('.foco').style.left = '0px'
@@ -129,20 +131,4 @@ function reiniciarJuego() {
     e.style.removeProperty('background-color')
     e.style.color = '#000'
   })
-}
-
-function jugarMaquina() {
-  let movimientos = []
-  cuadros.forEach((e, index) => {
-    if (e.innerHTML === '') movimientos.push(index)
-  })
-
-  if (movimientos.length > 0) {
-    let movimientoMaquina =
-      movimientos[Math.floor(Math.random() * movimientos.length)]
-    cuadros[movimientoMaquina].innerHTML = '0'
-    Ganador()
-    Empate()
-    cambiarTurno()
-  }
 }
