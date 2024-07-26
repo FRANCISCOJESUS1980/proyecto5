@@ -2,24 +2,24 @@
   display: flex;
 
   gap: 1rem;
-  margin: 20px;
+  margin: $quinto-margin;
 }
 .music-controls:hover {
-  padding: 0.8rem 1.3rem;
+  padding: $secundary-padding;
 }
 #playPauseBtn {
-  padding: 0.5rem 1rem;
+  padding: $tercer-padding;
   border: none;
-  border-radius: 5px;
-  background-color: #3a1c71;
-  color: white;
+  border-radius: $secundary-border-radius;
+  background-color: $secundary-background-color;
+  color: $primer-color;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 #playPauseBtn:hover {
-  background-color: #40e0d0;
-  padding: 0.8rem 1.3rem;
+  background-color: $tercer-background-color;
+  padding: $secundary-padding;
 }
 
 #volumeControl {

@@ -1,17 +1,17 @@
 .volverAlMenu {
-  background-color: #3a1c71;
-  padding: 5px 15px;
+  background-color: $secundary-background-color;
+  padding: $primer-padding;
   border: none;
   font-size: 1.2rem;
-  border-radius: 5px;
+  border-radius: $secundary-border-radius;
   cursor: pointer;
   display: inline;
-  margin: 10px 0px 0px 0px;
-  color: white;
+  margin: $cuarto-margin;
+  color: $primer-color;
 }
 
 .volverAlMenu:hover {
-  padding: 5px 15px;
-  background-color: #40e0d0;
-  color: white;
+  padding: $primer-padding;
+  background-color: $tercer-background-color;
+  color: $primer-color;
 }

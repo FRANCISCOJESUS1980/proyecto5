@@ -1,7 +1,8 @@
-@import './public/assets/componentes/tresEnRaya/logicaGame.scss';
+@import './public/assets/componentes/tresEnRaya/variables.scss';
 @import './public/assets/componentes/tresEnRaya/btnvoverMenuPrin.scss';
 @import './public/assets/componentes/tresEnRaya/musica.scss';
 @import './public/assets/componentes/tresEnRaya/volverMenu.scss';
+@import './public/assets/componentes/tresEnRaya/logicaGame.scss';
 
 * {
   padding: 0;
@@ -21,10 +22,10 @@ body {
   height: 100vh;
 }
 .cabecera {
-  margin: 15px;
+  margin: $primary-margin;
 }
 .intro {
-  margin: 10px;
+  margin: $secundary-margin;
 }
 
 .alinear {
@@ -48,15 +49,15 @@ body {
 }
 
 .cuadro {
-  background: white;
+  background: $primer-background;
   height: 22vmin;
   width: 22vmin;
   border: none;
-  border-radius: 8px;
+  border-radius: $primer-border-radius;
   cursor: pointer;
   font-size: 5rem;
   font-weight: 700;
 }
 .x {
-  margin: 5px;
+  margin: $tercer-margin;
 }

@@ -1,15 +1,15 @@
 #backToMenuBtn {
-  padding: 0.5rem 1rem;
+  padding: $tercer-padding;
   border: none;
-  border-radius: 5px;
-  background-color: #3a1c71;
-  color: white;
+  border-radius: $secundary-border-radius;
+  background-color: $secundary-background-color;
+  color: $primer-color;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-bottom: 30px;
+  margin-bottom: $primer-margin-bottom;
 }
 
 #backToMenuBtn:hover {
-  background-color: #40e0d0;
-  padding: 0.8rem 1.3rem;
+  background-color: $tercer-background-color;
+  padding: $secundary-padding;
 }
